@@ -6,6 +6,7 @@ recipes that you can cook based on the ingredients you have.
 ## Credits
 
 I used TheMealDB for the recipe API, so all the premade recipes on here are from that.
+
 For the widgets in the recipes, I used the Recipe_Card.dart code from Oflutter and made minor adjustments.
 Here is the original video I used: https://www.youtube.com/watch?v=FlGTSb7_9jk&t=628s.
 
