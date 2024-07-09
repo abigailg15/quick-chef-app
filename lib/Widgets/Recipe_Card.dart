@@ -77,7 +77,7 @@ class RecipeCard extends StatelessWidget {
                   child: Row(
                     children: [
                       Icon(
-                        Icons.star,
+                        Icons.rice_bowl_sharp,
                         color: Colors.yellow,
                         size: 18,
                       ),
@@ -96,7 +96,7 @@ class RecipeCard extends StatelessWidget {
                   child: Row(
                     children: [
                       Icon(
-                        Icons.schedule,
+                        Icons.flag,
                         color: Colors.yellow,
                         size: 18,
                       ),

@@ -7,9 +7,12 @@ class Pantry extends StatefulWidget {
   State<Pantry> createState() => _pantry();
 }
 
-class _pantry extends State<Pantry> {
+class _pantry extends State<Pantry> with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       appBar: AppBar(title: const Text("My Pantry Items")),
     );

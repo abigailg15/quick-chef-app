@@ -6,27 +6,27 @@ class RecipeApi {
   static Future<List<Recipe>> getRecipe() async {
     const letters = [
       "a",
-      "b",
-      "c",
-      "d",
-      "e",
-      "f",
-      "g",
-      "h",
-      "i",
-      "j",
-      "k",
-      "l",
-      "m",
-      "n",
-      "o",
-      "p",
-      "r",
-      "s",
-      "t",
-      "v",
-      "w",
-      "y"
+      // "b",
+      // "c",
+      // "d",
+      // "e",
+      // "f",
+      // "g",
+      // "h",
+      // "i",
+      // "j",
+      // "k",
+      // "l",
+      // "m",
+      // "n",
+      // "o",
+      // "p",
+      // "r",
+      // "s",
+      // "t",
+      // "v",
+      // "w",
+      // "y"
     ];
     List recipes = [];
     for (int x = 0; x < letters.length; x++) {
@@ -54,7 +54,6 @@ class RecipeApi {
         throw Exception('failed to load recipe');
       }
     }
-    print(recipes[1]);
     return Recipe.recipesFromSnapshot(recipes);
   }
 }

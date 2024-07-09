@@ -11,6 +11,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _homePage extends State<HomePage> {
+  final List<Widget> _pages = [
+    Search(),
+    Pantry(),
+    Favorites(),
+  ];
   @override
   int _selectedIndex = 0;
   Widget build(BuildContext context) {
@@ -20,14 +25,11 @@ class _homePage extends State<HomePage> {
       });
     }
 
-    final List<Widget> _pages = [
-      Search(),
-      Pantry(),
-      Favorites(),
-    ];
-
     return Scaffold(
-      body: _pages[_selectedIndex],
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _pages,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _navigateBottomBar,

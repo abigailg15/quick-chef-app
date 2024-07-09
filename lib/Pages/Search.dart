@@ -10,18 +10,17 @@ class Search extends StatefulWidget {
   State<Search> createState() => _search();
 }
 
-class _search extends State<Search> {
+class _search extends State<Search> with AutomaticKeepAliveClientMixin<Search> {
   late List<Recipe> _recipes;
   bool isLoading = true;
 
   @override
   void initState() {
-    super.initState();
     getRecipes();
+    super.initState();
   }
 
   Future<void> getRecipes() async {
-    print("startingGetRecipes");
     //Future: used for fetching data, doesn't block main thread of execution
     //await: pauses async function until "future" compeltes
     _recipes = await RecipeApi.getRecipe();
@@ -32,6 +31,7 @@ class _search extends State<Search> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
         body: isLoading
             ? Center(child: CircularProgressIndicator())
@@ -45,6 +45,9 @@ class _search extends State<Search> {
                       thumbnailUrl: _recipes[index].images);
                 }));
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
 
 //appBar: AppBar(title: const Text('Search Available Recipes')),

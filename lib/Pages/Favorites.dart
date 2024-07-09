@@ -7,9 +7,12 @@ class Favorites extends StatefulWidget {
   State<Favorites> createState() => _favorites();
 }
 
-class _favorites extends State<Favorites> {
+class _favorites extends State<Favorites> with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       appBar: AppBar(title: const Text("Favorite Recipes")),
     );
