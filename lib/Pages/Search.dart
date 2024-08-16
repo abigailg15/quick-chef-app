@@ -24,9 +24,9 @@ class _search extends State<Search> with AutomaticKeepAliveClientMixin<Search> {
     //Future: used for fetching data, doesn't block main thread of execution
     //await: pauses async function until "future" compeltes
     _recipes = await RecipeApi.getRecipe();
-    setState(() {
-      isLoading = false;
-    });
+      setState(() {
+        isLoading = false;
+      });
   }
 
   @override
